@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="jeet">Document</title>
+    <link href="./index.css">
+    </link>
+</head>
+
+<body>
+    <div>
+        <h1 class="jeet myClass">we are here</h1>
+        <p id="jeet" class="jet">Hello
+            <span>See this</span>
+            <em>youtube</em>
+            <span>World</span>
+        </p>
+    </div>
+    <div id="k">
+        <p  class="myClass">bye</p>
+        <h2 >Learning Javascript <!--this is a comment --></h2>
+    </div>
+    <div id="d">
+        <p>first para tag in div
+            <span>See that</span>
+            <span id="find" >twitter</span>
+        </p>
+        <p class="jeet">second para tag of div
+            <span>messanger</span>
+        </p>
+    </div>
+    <section id="mysec">
+
+    </section>
+
+    <!-- <script src="script/learn.js"></script> -->
+    <script>
+        // get element by Id
+        // var result=document.getElementById("jeet");
+        // console.log(result);
+        // document.write(result);
+
+        // get element by tag name
+        //       var result= document.getElementsByTagName("p");
+        //    console.log(result);
+        //    document.write(result);
+        //   get elements by tagname using string
+        //var result=document.getElementsByTagName("*");
+        //     console.log(result);
+        //    document.write(result);
+        // getElementsByTagName more specific
+        //    var getSpan=document.getElementById("jeet");
+        //     var result=getSpan.getElementsByTagName("span");
+        //var result = document.getElementsByTagName("span");----- will reflect all the span tags in document
+
+        // or we can write 
+        //     var result= document.getElementById("jeet").getElementsByTagName("span");
+        //   console.log(result);
+        //  document.write(result);
+        // loop
+        //var result=document.getElementsByTagName("p"); 
+        //var result=document.getElementsByTagName("p")[0]; //for specific line
+
+        //  var len=document.getElementsByTagName("p").length;
+        //  for(let i=0;i<len;i++)
+        //  {
+        //      var result=document.getElementsByTagName("p")[i];
+        // console.log(result );
+        //  document.write(result + "<br>");
+        //  }
+
+        // var result =document.getElementsByClassName("jeet myClass");
+        //var result=document.body.getElementsByClassName("jeet myClass");
+        //more specific
+        // var result=document.getElementById("d").getElementsByClassName("jeet");
+        //length property with classname
+        //   var data=document.getElementsByClassName("jeet");
+        //   var result=data.length;
+
+        //  document.write(result);
+        //  for(let i=0;i<result;i++){
+        //     var data=document.getElementsByClassName("jeet")[i];
+        //  console.log(data);
+        //  document.write(data + "<br>");
+        //  }
+        // element selecter
+        //var result=document.querySelector("p");
+        //id selector
+        // var result=document.querySelector("#jeet");
+        //class selector
+        //var result=document.querySelector(".jeet");
+        //queryselectorall
+        //var result=document.querySelectorAll("p");   //-------(we can pass multiple elements/id/class/attributes here it will return either one or all element if matched)
+        //attribute selector
+        // var result = document.querySelectorAll("div[id='k']");
+        // console.log(result);
+        // document.write(result);
+        // var result=document.querySelectorAll(".jeet");
+        // console.log(result);
+        // document.write(result);
+        // querySelectorAll more specific
+        // var data=document.getElementById("k");
+        // var result=data.querySelectorAll("h2");
+        // console.log(result);
+        // document.write(result);
+        // length property with querySelectorAll
+      //  var data=document.querySelectorAll(".jeet");
+        // var result=data.length;
+        // document.write(result);
+        // console.log(result);
+        // loop in querySelectorAll
+        // var len=data.length;
+        // for(let i=0; i<len; i++)
+        // {
+        //     var result=data[i];
+        // document.write(result + "<br>");
+        // console.log(result);
+        //}
+        //properties of node
+        //1.document
+        // document.write("--------document----------<br><br>");
+        // document.write(document.nodeName + "<br>");
+        // document.write(document.nodeValue + "<br>");
+        // document.write(document.nodeType + "<br>");
+        // console.log(document.nodeName);
+        // console.log(document.nodeType);
+        // console.log(document.nodeValue);
+
+        // //2.element
+
+        // document.write("--------element----------<br><br>");
+        // var elm = document.getElementById("find")
+        // document.write(elm.nodeName + "<br>");
+        // document.write(elm.nodeValue + "<br>");
+        // document.write(elm.nodeType + "<br>");
+        // console.log(elm.nodeName);
+        // console.log(elm.nodeType);
+        // console.log(elm.nodeValue);
+
+        // //3.text
+        // document.write("--------Text----------<br><br>");
+        // var txt = document.getElementById("find")
+        // document.write(txt.firstChild.nodeName + "<br>");
+        // document.write(txt.firstChild.nodeValue + "<br>");
+        // document.write(txt.firstChild.nodeType + "<br>");
+        // console.log(txt.firstChild.nodeName);
+        // console.log(txt.firstChild.nodeType);
+        // console.log(txt.firstChild.nodeValue);
+
+        // //4.comment
+        // document.write("--------Comment----------<br><br>");
+        // var txt = document.getElementById("find")
+        // document.write(txt.firstChild.nextSibling.nodeName + "<br>");
+        // document.write(txt.firstChild.nextSibling.nodeValue + "<br>");
+        // document.write(txt.firstChild.nextSibling.nodeType + "<br>");
+        // console.log(txt.firstChild.nextSibling.nodeName);
+        // console.log(txt.firstChild.nextSibling.nodeType);
+        // console.log(txt.firstChild.nextSibling.nodeValue);
+
+            // accessing text in node
+           // document.write("------text-------<br>")
+            //var txt= document.getElementById("find");
+           // document.write(txt.firstChild.nodeValue);
+            //assigning the value in node
+            // .firstChild.nodeValue="This is newly assigned value";
+           // document.write(txt);
+        //  properties of attribute 
+        // var result= document.getElementById("jeet");
+        //  var atr=result.attributes[0].nodeName;
+         
+        //  document.write(result.attributes[0].nodeName+ "=" );   
+        //  document.write(result.attributes[0].nodeValue + "<br>");
+        //  document.write(result.attributes[1].nodeName+ "=" );   
+        //  document.write(result.attributes[1].nodeValue + "<br>");
+        //     // to know total no of attributes 
+        //     num= result.attributes.length;
+        //     document.write(num + "<br>");
+
+        //     // imp:- further we must use name and value in the place of nodeName and nodeValue
+        //     for(let i=0;i<num;i++)
+        //     {
+        //     document.write(result.attributes[i].name + "=");
+        //     document.write(result.attributes[i].value + "<br>");
+        //     }
+        //     //dom traversal
+        //     // parentNode (returns parent of anytype) vs parentElement(return only if parent is element)
+        //     console.log(result.parentElement);
+        //     var r=document.getElementById("d");
+        //     console.log(r.parentNode);
+        // class car{
+        //     constructor(name, year){
+        //         this.name=name;
+        //         this.year=year;
+        //     }
+        //     age(){
+        //         let date = new Date();
+        //         return date.getFullYear() - this.year;
+        //     }
+        // }
+        // let myCar = new car("audi",2019);
+        // document.getElementById("find").innerHTML= "My car is " + myCar.age() + "Years old";
+     // append existing element
+    //  var find=document.getElementById("find");
+    //     // // console.log(k);
+    //  var mysec=document.getElementById("mysec");
+    //     // // console.log(mySec);
+    //      mysec.appendChild(find);
+    //     console.log(mysec);
+    //     console.log(d);
+    // creating a a new element h2
+    // var nEnode = document.createElement("h2");
+    //  var targetNode= document.getElementById("k");
+    //  appending new h2 to div
+    // targetNode.appendChild(nEnode);
+    // console.log(targetNode);
+    // creating a new text node 
+    // var targetNode=document.getElementById("k");
+    // var nTNode= document.createTextNode("text created by Jawascript");
+    // targetNode.appendChild(nTNode);
+    // console.log(targetNode);
+    // appendig new comment node 
+    // var targetNode=document.getElementById("k");
+    // var nCnode=document.createComment("comment by script");
+    // targetNode.appendChild(nCnode);
+    // console.log(targetNode);
+    // creating new element and a text and comment node then appendind text to newly created h2 element
+    // var targetNode=document.getElementById("mysec");
+    // var nEnode =document.createElement("h2");
+    // var nTNode=document.createTextNode("text from script tag");
+    // var nCnode=document.createComment("this is a comment");
+    // nEnode.appendChild(nTNode);
+    // targetNode.appendChild(nEnode);
+    // targetNode.appendChild(nCnode);
+    // console.log(targetNode);
+    // creating a document fragment in which a p element and h2 element with text then append this document fragment to DoM
+    var df=document.createDocumentFragment();  
+    // new empty DocumentFragment
+    var nEnodeP=document.createElement("p");
+    var nTNodeP=document.createTextNode("para from JS");
+    nEnodeP.appendChild(nTNodeP);
+    var nEnodeH=document.createElement("h3");
+    var nTNodeH=document.createTextNode("head from JS");
+   
+    nEnodeH.appendChild(nTNodeH);
+ // we can use nEnodeH.textContent="Head from Js";
+
+
+    var nCnode=document.createComment("cmnt from JS");
+    df.appendChild(nEnodeH);
+    df.appendChild(nEnodeP);
+    df.appendChild(nCnode);
+    // console.log(df);
+    // appending this document fragment to our main DOM
+    var targetNode=document.getElementById("mysec")
+    targetNode.appendChild(df);
+    console.log(targetNode);
+    console.log(df);
+
+
+
+    </script>
+</body>
+
+</html>

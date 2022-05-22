@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JawaScript Callbacks</h1>
+    <p>Displaying result after Calculation</p>
+    <p id="demo"></p>
+    
+
+<script>
+    // function myDisplayer(some){
+    //     document.getElementById("demo").innerHTML=some;
+    // }
+
+    // function myCalculator(num1, num2, myCallback){
+    //     var result=num1+num2;
+    //     myCallback(result);
+    // }
+    // myCalculator(10,10,myDisplayer);
+//setTimeOut(functionname, timetoExe)---A javascript Function set timeout for executing a function in millisec
+//    setTimeout(function() {myfunction("myfunction in timeout");}, 3000);
+//    function myfunction(value){
+//        document.getElementById("demo").innerHTML=value;
+//    }
+//setInterval(function, timeInterval to iterate)---- iterate a function in given timeinterval(millisecond)
+// setInterval(myfunction, 1000);
+// function myfunction(){
+//     let d= new Date();
+//     document.getElementById("demo").innerHTML=d.getHours() + ":" + d.getMinutes() +":" + d.getSeconds();
+// }
+function myDisplayer(some){
+    document.getElementById("demo").innerHTML=some;
+}
+function getfile(myCallback){
+    let req=new XMLHttpRequest();
+    req.open('GET',"mycar.html");
+    req.onload=function(){
+        if(req.status==200){
+            myCallback(this.responseText);
+        }
+        else{
+            myCallback("Error: " + req.status);
+        }
+
+    }
+    req.send();
+}
+getfile(myDisplayer);
+</script>
+</body>
+</html>
